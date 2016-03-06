@@ -1,0 +1,340 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.medikeen.patient.RegistrationActivity" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg"
+        android:tint="#90000000" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/framlayoutr_margin_left"
+        android:layout_marginRight="@dimen/framelayour_margin_right"
+        android:background="@android:color/transparent"
+        android:focusableInTouchMode="true"
+        android:paddingTop="@dimen/framelayou_margin_right"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp" >
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="@string/register"
+                android:textColor="#eeeeee"
+                android:textSize="@dimen/text_Size" />
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="First Name"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="First Name"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextFirstName"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Last name"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edittext_margin_top" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Last Name"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextLastName"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Email Id"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextEmailId"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Password"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextPassword"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Confirm Password"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextConfirmPassword"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Address"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/editTextAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Address"
+                    android:inputType="textMultiLine"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextAddress"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Contact No"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextContactNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Contact Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#eeeeee"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextContactNo"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edittext_margin_left"
+                android:layout_marginRight="@dimen/edittext_margin_right"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <com.medikeen.views.MyButton
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_states_passenger"
+                    android:text="@string/register"
+                    android:textColor="#fff" />
+
+                <com.medikeen.views.MyButton
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E53935"
+                    android:text="@string/login"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

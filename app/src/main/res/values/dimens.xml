@@ -1,0 +1,59 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="listitem_vertical_margin">15dp</dimen>
+    <dimen name="lisitem_left_margin">10dp</dimen>
+    <dimen name="lisitem_right_margin">10dp</dimen>
+    <dimen name="textView_vertical_margin">15dp</dimen>
+    <dimen name="textView_left_margin">15dp</dimen>
+    <dimen name="textView1_vertical_margin">8dp</dimen>
+    <dimen name="textView2_vertical_margin">5dp</dimen>
+    <dimen name="framelayout_login_width">350dp</dimen>
+    <dimen name="framelayout_login_height">400dp</dimen>
+    <dimen name="text_Size">25dp</dimen>
+    <dimen name="text_Size1">18dp</dimen>
+    <dimen name="text_view_margin_left">10dp</dimen>
+    <dimen name="text_view_margin_top">10dp</dimen>
+    <dimen name="edittext_margin_top">10dp</dimen>
+    <dimen name="edittext_margin_left">10dp</dimen>
+    <dimen name="edittext_margin_right">10dp</dimen>
+    <dimen name="button_margin_left">20dp</dimen>
+    <dimen name="button_margin_right">20dp</dimen>
+    <dimen name="button_margin_top">10dp</dimen>
+    <dimen name="view_margin_top">10dp</dimen>
+    <dimen name="view_margin_left">20dp</dimen>
+    <dimen name="view_margin_right">30dp</dimen>
+    <dimen name="textview_margin_left">20dp</dimen>
+    <dimen name="framlayout_margin_left">20dp</dimen>
+    <dimen name="framelayou_margin_right">20dp</dimen>
+    <dimen name="linear_margin_top">20dp</dimen>
+    <dimen name="linear2_margin_top">10dp</dimen>
+    <dimen name="frame_margin_bottom">70dp</dimen>
+    <dimen name="framlayoutr_margin_left">10dp</dimen>
+    <dimen name="framelayour_margin_right">10dp</dimen>
+    <dimen name="textsp_margin_left">15dp</dimen>
+    <dimen name="text_Size1p">15dp</dimen>
+    <dimen name="linearlayout_doc_sp_top">20dp</dimen>
+    <dimen name="image_width">75dp</dimen>
+    <dimen name="image_height">75dp</dimen>
+    <dimen name="patient_name_left">10dp</dimen>
+    <dimen name="patient_name_vertical">10dp</dimen>
+    <dimen name="linearlayout_pre_vertical">10dp</dimen>
+    <dimen name="linearlayout_pre_left">10dp</dimen>
+    <dimen name="linearlayout_pre_right">10dp</dimen>
+    <dimen name="image_view_top">10dp</dimen>
+    <dimen name="text_viewname_top">20dp</dimen>
+    <dimen name="text_viewqul_top">10dp</dimen>
+    <dimen name="iconpadding">5dp</dimen>
+    <dimen name="button_margin_leftpres">10dp</dimen>
+    <dimen name="dialog_text_size">18dp</dimen>
+    <dimen name="dialog_button_text_size">16dp</dimen>
+
+</resources>

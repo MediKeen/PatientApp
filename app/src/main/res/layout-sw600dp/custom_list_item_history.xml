@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/editext"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/patient_name_left"
+            android:layout_marginTop="@dimen/patient_name_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewPatientname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient&apos;s Name"
+                android:textColor="#34495e"
+                android:textSize="@dimen/text_Size1" />
+
+            <TextView
+                android:id="@+id/textViewPatientAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textView2_vertical_margin"
+                android:text="Patient&apos;s Name"
+                android:textColor="#95a5a6"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_view_top"
+                android:layerType="software"
+                android:src="@drawable/dashed_line" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewPatient"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_gravity="right"
+            android:src="@drawable/images" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonPres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states_prescription"
+            android:drawableLeft="@drawable/plus"
+            android:drawablePadding="@dimen/iconpadding"
+            android:text="View Prescription"
+            android:textColor="#3498db" />
+
+        <Button
+            android:id="@+id/buttonProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/button_margin_leftpres"
+            android:background="@drawable/button_states_prescription"
+            android:drawableLeft="@drawable/plus"
+            android:drawablePadding="@dimen/iconpadding"
+            android:text="View Profile" />
+    </LinearLayout>
+
+</LinearLayout>

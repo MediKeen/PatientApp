@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="button_textcolor">#fff</color>
+    <color name="green">#37ae6a</color>
+    <color name="gradient">#1abc9c</color>
+    <color name="drawer_pressed">#bdc3c7</color>
+    <color name="tabSelectedTextColor">#ffffff</color>
+    <color name="dividerColor">#BDBDBD</color>
+</resources>

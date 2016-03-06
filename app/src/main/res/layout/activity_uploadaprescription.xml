@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/medikeen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MediKeen"
+            android:textSize="60sp" />
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/textViewEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:text="To Upload New Prescription click on &apos;+&apos; Button"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Delivery Address:"
+            android:textSize="16sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/editTextDoctorAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edittext_margin_top"
+            android:background="@drawable/currencyconvertereditext"
+            android:hint="Enter Delivery Address" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/homdeDeleiveryThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/threehr" />
+
+            <RadioButton
+                android:id="@+id/homdeDeleiveryeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eighthr" />
+        </RadioGroup>
+
+        <com.medikeen.views.MyButton
+            android:id="@+id/buttonNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:background="@drawable/button_states_passenger"
+            android:text="Next"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUploadPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/textViewUploadedPrescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploaded Prescriptions:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fillViewport="true"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:id="@+id/root"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+
+        <com.medikeen.views.MyButton
+            android:id="@+id/buttonUPloadPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:background="@drawable/button_states_passenger"
+            android:drawableLeft="@drawable/ic_briefcase_upload_white_24dp"
+            android:text="Attach Prescription"
+            android:textColor="#fff" />
+
+        <com.medikeen.views.MyButton
+            android:id="@+id/buttonSendPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:background="@drawable/button_states_passenger"
+            android:text="Send"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <!--<com.medikeen.util.ButtonFloat-->
+        <!--android:id="@+id/buttonFloat"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_margin="25dp"-->
+        <!--android:background="#1E88E5"-->
+        <!--materialdesign:animate="true"-->
+        <!--materialdesign:iconDrawable="@drawable/ic_action_new" />-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/buttonFloat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="25dp"
+        android:background="#1E88E5"
+        android:src="@drawable/ic_action_new"
+        android:visibility="gone"/>
+
+    <com.medikeen.views.MyTextView
+        android:id="@+id/textViewNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
