@@ -20,105 +20,104 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class FeedbackUploadTask extends
-		AsyncTask<FeedbackModel, String, String> {
+        AsyncTask<FeedbackModel, String, String> {
 
-	private Activity mActivity;
-	private ProgressDialog pd;
-	private static final String TAG = "FeedbackUploadTask";
+    private Activity mActivity;
+    private ProgressDialog pd;
+    private static final String TAG = "FeedbackUploadTask";
 
-	public FeedbackUploadTask(Activity activity) {
-		mActivity = activity;
-	}
+    public FeedbackUploadTask(Activity activity) {
+        mActivity = activity;
+    }
 
-	@Override
-	protected void onPreExecute() {
-		super.onPreExecute();
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
 
-		Log.i(TAG, "Starting FeedbackUploadTask");
+        Log.i(TAG, "Starting FeedbackUploadTask");
 
-		pd = new ProgressDialog(mActivity);
-		pd.setMessage("Please wait..");
-		pd.setTitle("Uploading");
-		pd.setCancelable(false);
-		pd.show();
-	}
+        pd = new ProgressDialog(mActivity);
+        pd.setMessage("Please wait..");
+        pd.setTitle("Uploading");
+        pd.setCancelable(false);
+        pd.show();
+    }
 
-	@Override
-	protected void onPostExecute(String result) {
-		pd.dismiss();
+    @Override
+    protected void onPostExecute(String result) {
 
-		Toast.makeText(mActivity, "Your feedback has been uploaded",
-				Toast.LENGTH_LONG).show();
-		;
 
-		Log.i(TAG, "Ending FeedbackUploadTask");
-	}
+        Toast.makeText(mActivity, "Your feedback has been uploaded",
+                Toast.LENGTH_LONG).show();
+        Log.i(TAG, "Ending FeedbackUploadTask");
+        pd.dismiss();
+    }
 
-	@Override
-	protected String doInBackground(FeedbackModel... params) {
-		// TODO Auto-generated method stub
+    @Override
+    protected String doInBackground(FeedbackModel... params) {
+        // TODO Auto-generated method stub
 
-		String targetURL = Constants.SERVER_URL
-				+ "/android_api/feedback/feedback.php";
+        String targetURL = Constants.SERVER_URL
+                + "/android_api/feedback/feedback.php";
 
-		Gson gson = new Gson();
-		String requestContent = gson.toJson(params[0], FeedbackModel.class);
+        Gson gson = new Gson();
+        String requestContent = gson.toJson(params[0], FeedbackModel.class);
 
-		Log.i(TAG, "requestContent: " + requestContent);
+        Log.i(TAG, "requestContent: " + requestContent);
 
-		URL url;
-		HttpURLConnection connection = null;
-		try {
-			// Create connection
-			url = new URL(targetURL);
-			connection = (HttpURLConnection) url.openConnection();
-			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type",
-					"application/x-www-form-urlencoded");
+        URL url;
+        HttpURLConnection connection = null;
+        try {
+            // Create connection
+            url = new URL(targetURL);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type",
+                    "application/x-www-form-urlencoded");
 
-			// connection.setRequestProperty("Content-Length", "" +
-			// Integer.toString(urlParameters.getBytes().length));
-			// connection.setRequestProperty("Content-Language", "en-US");
+            // connection.setRequestProperty("Content-Length", "" +
+            // Integer.toString(urlParameters.getBytes().length));
+            // connection.setRequestProperty("Content-Language", "en-US");
 
-			connection.setUseCaches(false);
-			connection.setDoInput(true);
-			connection.setDoOutput(true);
+            connection.setUseCaches(false);
+            connection.setDoInput(true);
+            connection.setDoOutput(true);
 
-			// Send request
-			DataOutputStream wr = new DataOutputStream(
-					connection.getOutputStream());
-			wr.writeBytes(requestContent);
-			wr.flush();
-			wr.close();
+            // Send request
+            DataOutputStream wr = new DataOutputStream(
+                    connection.getOutputStream());
+            wr.writeBytes(requestContent);
+            wr.flush();
+            wr.close();
 
-			// Get Response
-			InputStream is = connection.getInputStream();
-			BufferedReader rd = new BufferedReader(new InputStreamReader(is));
-			String line;
-			StringBuffer response = new StringBuffer();
-			while ((line = rd.readLine()) != null) {
-				response.append(line);
-				response.append('\r');
-			}
-			rd.close();
-			String responseString = response.toString();
+            // Get Response
+            InputStream is = connection.getInputStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+            String line;
+            StringBuffer response = new StringBuffer();
+            while ((line = rd.readLine()) != null) {
+                response.append(line);
+                response.append('\r');
+            }
+            rd.close();
+            String responseString = response.toString();
 
-			Log.i(TAG, "responseString: " + responseString);
+            Log.i(TAG, "responseString: " + responseString);
 
-			return responseString;
+            return responseString;
 
-		} catch (Exception e) {
+        } catch (Exception e) {
 
-			e.printStackTrace();
-			ACRA.getErrorReporter().handleSilentException(e);
-			return null;
+            e.printStackTrace();
+            ACRA.getErrorReporter().handleSilentException(e);
+            return null;
 
-		} finally {
+        } finally {
 
-			if (connection != null) {
-				connection.disconnect();
-			}
-		}
-	}
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+    }
 
 }

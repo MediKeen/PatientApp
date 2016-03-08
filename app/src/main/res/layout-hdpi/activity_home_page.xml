@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEDEDE" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DEDEDE"
+        android:orientation="vertical" >
+
+        <TabHost
+            android:id="@+id/TabHostpatient"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <!-- TabWidget used to creat tabs -->
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </TabWidget>
+                <!-- container of tabs -->
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <!-- tab N°1 -->
+                    <!-- Inclusion of the interface -->
+
+                    <include
+                        android:id="@+id/savedprescription"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        layout="@layout/fragment_history" >
+                    </include>
+                    <!-- tab N°2 -->
+                    <!-- Inclusion of the interface -->
+
+                    <include
+                        android:id="@+id/searchdocotr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        layout="@layout/activity_search_doctor" >
+                    </include>
+                    
+                     <!-- tab N°2 -->
+                    <!-- Inclusion of the interface -->
+
+                    <include
+                        android:id="@+id/uploadprescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        layout="@layout/activity_uploadaprescription" >
+                    </include>
+                    
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+</FrameLayout>

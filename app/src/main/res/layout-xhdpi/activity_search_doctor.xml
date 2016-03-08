@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/doctorinfo"
+        android:textColor="#e74c3c"
+        android:textSize="@dimen/text_Size1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/doctorinfo1"
+        android:textColor="#bdc3c7"
+        android:textSize="@dimen/text_Size1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/linearlayout_doc_sp_top"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewPhysician"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/roundedimageview"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/physiotherapist"
+                        android:tag="ImageviewPhysician" />
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewPhysician2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.52"
+                        android:background="@drawable/roundedimageview_pressed"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="#1abc9c"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageViewtick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/accept"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewphy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/textsp_margin_left"
+                        android:layout_marginTop="10dp"
+                        android:text="Physician"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_Size1p"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewOrtho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundedimageview"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/orthopedic"
+                        android:tag="ImageviewOrtho" />
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewOrtho1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.52"
+                        android:background="@drawable/roundedimageview_pressed"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="#1abc9c"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageViewOrtho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/accept"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/textsp_margin_left"
+                        android:layout_marginTop="10dp"
+                        android:text="Orthopedic"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_Size1p"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/Imageviewsurgeon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundedimageview"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/neurologist"
+                        android:tag="Imageviewsurgeon" />
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/Imageviewsurgeon1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.52"
+                        android:background="@drawable/roundedimageview_pressed"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="#1abc9c"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/Imageviewsurgeontick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/accept"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/textsp_margin_left"
+                        android:layout_marginTop="10dp"
+                        android:text="Neuorologist"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_Size1p"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewDentist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/roundedimageview"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dentist"
+                        android:tag="ImageviewDentist" />
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewDentist1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.52"
+                        android:background="@drawable/roundedimageview_pressed"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="#1abc9c"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ImageviewDentisttick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/accept"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/textsp_margin_left"
+                        android:layout_marginTop="10dp"
+                        android:text="Dentist"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_Size1p"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewPedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundedimageview"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pedatrician"
+                        android:tag="ImageviewPedia" />
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/ImageviewPedia1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.52"
+                        android:background="@drawable/roundedimageview_pressed"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="#1abc9c"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ImageviewPediatick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/accept"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/textsp_margin_left"
+                        android:layout_marginTop="10dp"
+                        android:text="Pediatircs"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_Size1p"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/Imageviewgyno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundedimageview"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gyneco1"
+                        android:tag="Imageviewgyno" />
+
+                    <com.medikeen.util.SquareImageView
+                        android:id="@+id/Imageviewgyno1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.52"
+                        android:background="@drawable/roundedimageview_pressed"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="#1abc9c"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/Imageviewgynotick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/accept"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/textsp_margin_left"
+                        android:layout_marginTop="10dp"
+                        android:text="Gynaecologists"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_Size1p"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_states_passenger"
+            android:text="Search"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/buttonMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_states_passenger"
+            android:text="Show On Map"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>

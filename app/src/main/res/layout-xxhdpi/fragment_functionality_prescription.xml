@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutAdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Enter Delivery Address :"
+        android:textSize="16sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/editTextDoctorAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edittext_margin_top"
+        android:background="@drawable/currencyconvertereditext"
+        android:hint="Enter Delivery Address" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupOffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/homdeDeleiveryThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/threehr" />
+
+        <RadioButton
+            android:id="@+id/homdeDeleiveryeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eighthr" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:background="@drawable/button_states_passenger"
+        android:text="Next"
+        android:textColor="#fff" />
+
+</LinearLayout>

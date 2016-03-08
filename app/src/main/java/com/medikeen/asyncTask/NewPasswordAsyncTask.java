@@ -52,8 +52,6 @@ public class NewPasswordAsyncTask extends
     protected void onPostExecute(String result) {
         // TODO Auto-generated method stub
         super.onPostExecute(result);
-        pd.dismiss();
-
         Gson gson = new Gson();
 
         ResetPasswordResponse response = gson.fromJson(result,

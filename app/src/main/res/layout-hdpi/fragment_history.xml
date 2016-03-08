@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageViewnotfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/norecord"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewnotfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No History Found"
+        android:textColor="#e74c3c"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/lisitem_left_margin"
+        android:layout_marginRight="@dimen/lisitem_right_margin"
+        android:layout_marginTop="@dimen/listitem_vertical_margin"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+     >
+    </ListView>
+
+</LinearLayout>

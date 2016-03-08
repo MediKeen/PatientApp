@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:text="@string/titleDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:text="@string/desc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="1.	ELIGIBILITY"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/elDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="2.	SERVICES"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/srDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="3.	MEDIKEEN ACCOUNT AND FEES"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/phDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="4.	SCOPE OF SERVICES"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/scDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="5.	USER CONTENT"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/uDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="6.	MEDIKEEN CONTENT"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/pcDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="7.	TERMINATING OUR SERVICES"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/tDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="8.	WARRANTIES AND DISCLAIMERS"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/wDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="9.	LIABILITY FOR OUR SERVICES"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/lDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="10.	INDEMNITY"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/iDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="11.	GENERAL"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/gDesc"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="Questions on Terms of Use:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.medikeen.views.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/questions"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</ScrollView>

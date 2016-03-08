@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/history_thumbnail"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/rec_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajay"
+            android:textColor="#212121"
+            android:textSize="20sp" />
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/rec_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="4479 141st Avenue Southeast, Bellevue, WA, United "
+            android:textColor="#9E9E9E"
+            android:textSize="14sp" />
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/rec_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="1234567890"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/rec_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="3 hr delivery"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <com.medikeen.views.MyTextView
+            android:id="@+id/rec_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="12:00"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

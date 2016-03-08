@@ -50,8 +50,6 @@ public class LoginTask extends AsyncTask<LoginModel, String, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         Log.e("response json is ", "" + result);
-        pd.dismiss();
-
         Gson gson = new Gson();
 
         LoginResponse response = gson.fromJson(result, LoginResponse.class);
@@ -97,6 +95,8 @@ public class LoginTask extends AsyncTask<LoginModel, String, String> {
                     .findViewById(R.id.editTextPasswordLogin);
             mPassword.setError(response.error_msg);
         }
+
+        pd.dismiss();
     }
 
     @Override

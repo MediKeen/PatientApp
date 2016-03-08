@@ -38,12 +38,11 @@
         <activity
             android:name=".patient.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name="com.medikeen.patient.SplashActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,77 +53,78 @@
             android:name="com.medikeen.patient.Login"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustNothing"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.medikeen.patient.HomePage"
             android:label="@string/title_activity_home_page"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.ShowMap"
             android:label="@string/title_activity_map"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.SearchResult"
             android:label="@string/title_activity_search"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.ViewPrescription"
             android:label="@string/title_activity_prescription"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.DoctorProfile"
             android:label="@string/title_activity_doctorprofile"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.LandingActivity"
             android:label="@string/title_medikeen_menu"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.LoadingScreenActivity"
             android:label="@string/title_activity_doctorprofile"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.CameraActivity"
             android:exported="true"
             android:label="@string/title_activity_doctorprofile"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.RegistrationActivity"
             android:label="@string/title_activity_registration"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateVisible|adjustPan"/>
+            android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity
             android:name="com.medikeen.patient.ForgotPasswordActivity"
             android:label="@string/title_activity_frogot_password"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.AttachPrescription"
             android:label="@string/title_activity_attach_prescription"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.AddressPrescription"
             android:label="@string/title_activity_address_prescription"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.medikeen.patient.PasswordResetCodeVerificationActivity"
             android:label="@string/title_activity_password_reset_code_verification"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.NewPasswordActivity"
             android:label="@string/title_activity_new_password"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.UserProfileActivity"
             android:label="@string/title_activity_user_profile"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.HistoryDetailActivity"
             android:label="@string/title_activity_history_detail"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.medikeen.patient.OtpActivity"
             android:label="@string/title_activity_otp"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <receiver android:name="com.medikeen.util.IncomingSms">
             <intent-filter>

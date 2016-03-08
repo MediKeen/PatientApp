@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editTextFeedbackTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edittext_margin_left"
+        android:layout_marginRight="@dimen/edittext_margin_right"
+        android:layout_marginTop="@dimen/edittext_margin_top"
+        android:background="@drawable/currencyconvertereditext"
+        android:hint="Enter Title" />
+
+    <EditText
+        android:id="@+id/editTextFeedbackDescription"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/edittext_margin_left"
+        android:layout_marginRight="@dimen/edittext_margin_right"
+        android:layout_marginTop="@dimen/edittext_margin_top"
+        android:background="@drawable/currencyconvertereditext"
+        android:hint="Enter Description"
+        android:maxLines="10" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edittext_margin_left"
+        android:layout_marginRight="@dimen/edittext_margin_right"
+        android:layout_marginTop="@dimen/edittext_margin_top"
+        android:background="@drawable/button_states_passenger"
+        android:text="Send"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

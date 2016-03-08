@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.medikeen.util.SquareImageView
+        android:id="@+id/ImageviewPhysician"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedimageview"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/images" />
+
+    <TextView
+        android:id="@+id/textViewDocName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/text_viewname_top"
+        android:text="Doctor Name"
+        android:textSize="@dimen/text_Size1" />
+
+    <TextView
+        android:id="@+id/textViewDocSpec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/text_viewqul_top"
+        android:text="MD MBBS"
+        android:textSize="@dimen/text_Size1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/framlayout_margin_left"
+        android:layout_marginRight="@dimen/framelayour_margin_right"
+        android:layout_marginTop="@dimen/image_view_top"
+        android:layerType="software"
+        android:src="@drawable/dashed_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/framlayout_margin_left"
+        android:layout_marginTop="@dimen/framlayout_margin_left"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Address :"
+            android:textSize="@dimen/text_Size1p" />
+
+        <TextView
+              android:id="@+id/textViewDocAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/textView_left_margin"
+            android:text="Sadashiv Peth,Pune"
+            android:textSize="@dimen/text_Size1p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/framlayout_margin_left"
+        android:layout_marginTop="@dimen/framlayout_margin_left"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Contact No :"
+            android:textSize="@dimen/text_Size1p" />
+
+        <TextView
+            android:id="@+id/textViewContcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/textView_left_margin"
+            android:text="+91-1234567890"
+            android:textSize="@dimen/text_Size1p" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonFindMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:background="@drawable/button_states_passenger"
+        android:text="Find On Map"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

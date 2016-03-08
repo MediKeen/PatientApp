@@ -1,0 +1,200 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg"
+        android:tint="#80000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- LOGIN PAGE -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/framlayout_margin_left"
+            android:layout_marginRight="@dimen/framelayou_margin_right"
+            android:layout_marginTop="@dimen/linear_margin_top"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/login"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_Size"
+                android:visibility="gone" />
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Email"
+                android:textSize="@dimen/text_Size1"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextUsernameLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#EEEEEE"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextUsernameLogin"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <com.medikeen.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginTop="@dimen/text_view_margin_top"
+                android:text="Password"
+                android:textSize="@dimen/text_Size1"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.medikeen.views.MyEditText
+                    android:id="@+id/editTextPasswordLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="@dimen/edittext_margin_top"
+                    android:background="@android:color/transparent"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#EEEEEE"
+                    android:textCursorDrawable="@null" />
+
+                <View
+                    android:id="@+id/password_bottom_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextPasswordLogin"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:background="#ffffff" />
+
+                <com.medikeen.views.MyTextView
+                    android:id="@+id/textViewforgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/password_bottom_border"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/edittext_margin_right"
+                    android:layout_marginTop="10dp"
+                    android:text="Forgot Password"
+                    android:textColor="#EEEEEE"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical" >
+
+                <com.medikeen.views.MyButton
+                    android:id="@+id/buttonLoginLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#1E88E5"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textColor="@android:color/white" />
+
+                <com.medikeen.views.MyButton
+                    android:id="@+id/textViewCreateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#E53935"
+                    android:gravity="center"
+                    android:text="Sign up"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/view_margin_left"
+                android:layout_marginRight="@dimen/view_margin_right"
+                android:layout_marginTop="@dimen/view_margin_top"
+                android:background="#000"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/linear2_margin_top"
+                android:layout_marginTop="@dimen/linear2_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.medikeen.views.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New to MediKeen?"
+                    android:textColor="#000"
+                    android:textStyle="normal" />
+
+                <com.medikeen.views.MyTextView
+                    android:id="@+id/textViewCreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/textview_margin_left"
+                    android:text="@string/create"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

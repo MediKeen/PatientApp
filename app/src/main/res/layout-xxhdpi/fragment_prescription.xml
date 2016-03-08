@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:background="@drawable/tab_bg2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/linearlayout_pre_left"
+                    android:layout_marginRight="@dimen/linearlayout_pre_right"
+                    android:layout_marginTop="@dimen/linearlayout_pre_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Date:"
+                        android:textSize="@dimen/text_Size1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="24/06/2014"
+                        android:textSize="@dimen/text_Size1" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textViewClinicName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/button_margin_top"
+                    android:text="Clinic Name"
+                    android:textSize="@dimen/text_Size1" />
+
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/linearlayout_pre_left"
+                    android:layout_marginRight="@dimen/linearlayout_pre_right"
+                    android:layout_marginTop="@dimen/button_margin_top"
+                    android:text="Flat No B-52,Damodar Villa,Opposite kothrud stand,pune"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_Size1p" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/linearlayout_pre_left"
+                    android:layout_marginRight="@dimen/linearlayout_pre_right"
+                    android:layout_marginTop="@dimen/textView1_vertical_margin"
+                    android:layerType="software"
+                    android:src="@drawable/dashed_line" />
+
+                <ListView
+                    android:id="@+id/listView1Tabdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/linearlayout_pre_left"
+                    android:layout_marginRight="@dimen/linearlayout_pre_right"
+                    android:divider="@null"
+                    android:dividerHeight="5dp" >
+                </ListView>
+            </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

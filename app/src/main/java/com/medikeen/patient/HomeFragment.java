@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(new NewUploadPrescription(), "New Pescription");
+        adapter.addFrag(new NewUploadPrescription(), "New Prescription");
         adapter.addFrag(new HistoryFragment(), "History");
 
         viewPager.setAdapter(adapter);

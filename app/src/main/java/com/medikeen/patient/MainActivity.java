@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        sessionManager = new SessionManager(MainActivity.this);
+
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +78,12 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag("HomeFragment");
+            if (fragment != null && fragment.isVisible()) {
+                super.onBackPressed();
+            } else {
+                SelectItem(0);
+            }
         }
     }
 
@@ -146,7 +153,7 @@ public class MainActivity extends AppCompatActivity
 
                 android.support.v4.app.FragmentTransaction ftHome = getSupportFragmentManager()
                         .beginTransaction();
-                ftHome.replace(R.id.frame_container, fragment);
+                ftHome.replace(R.id.frame_container, fragment, "HomeFragment");
                 ftHome.commit();
 
                 hideFAB(false);
@@ -157,7 +164,7 @@ public class MainActivity extends AppCompatActivity
 
                 android.support.v4.app.FragmentTransaction ftFeedback = getSupportFragmentManager()
                         .beginTransaction();
-                ftFeedback.replace(R.id.frame_container, fragment);
+                ftFeedback.replace(R.id.frame_container, fragment, "Feedback");
                 ftFeedback.commit();
 
                 hideFAB(true);
@@ -168,7 +175,7 @@ public class MainActivity extends AppCompatActivity
 
                 android.support.v4.app.FragmentTransaction ftTandC = getSupportFragmentManager()
                         .beginTransaction();
-                ftTandC.replace(R.id.frame_container, fragment);
+                ftTandC.replace(R.id.frame_container, fragment, "TermsNCondition");
                 ftTandC.commit();
 
                 hideFAB(true);
@@ -179,7 +186,7 @@ public class MainActivity extends AppCompatActivity
 
                 android.support.v4.app.FragmentTransaction ftAboutUs = getSupportFragmentManager()
                         .beginTransaction();
-                ftAboutUs.replace(R.id.frame_container, fragment);
+                ftAboutUs.replace(R.id.frame_container, fragment, "AboutUs");
                 ftAboutUs.commit();
 
                 hideFAB(true);
@@ -190,7 +197,7 @@ public class MainActivity extends AppCompatActivity
 
                 android.support.v4.app.FragmentTransaction ftProfile = getSupportFragmentManager()
                         .beginTransaction();
-                ftProfile.replace(R.id.frame_container, fragment);
+                ftProfile.replace(R.id.frame_container, fragment, "UserProfileActivity");
                 ftProfile.commit();
 
                 hideFAB(true);
