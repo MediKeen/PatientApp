@@ -42,7 +42,7 @@ public class RegistrationIntentService extends IntentService {
 
         sessionManager = new SessionManager(getApplicationContext());
 
-//        String sessionId = sessionManager.getUserDetails().getPharmacyUserSessionId();
+        String userID = "" + sessionManager.getUserDetails().getPersonId();
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -60,7 +60,7 @@ public class RegistrationIntentService extends IntentService {
             Log.i(TAG, "GCM Registration Token: " + token);
 
             // TODO: Implement this method to send any registration to your app's servers.
-            sendRegistrationToServer("", token);
+            sendRegistrationToServer(userID, token);
 
             // Subscribe to topic channels
             subscribeTopics(token);
@@ -89,16 +89,17 @@ public class RegistrationIntentService extends IntentService {
      *
      * @param token The new token.
      */
-    private void sendRegistrationToServer(String sessionId, String token) {
+    private void sendRegistrationToServer(String userId, String token) {
         // Prepare JSON containing the GCM message content. What to send and where to send.
         try {
             JSONObject jGcmData = new JSONObject();
             jGcmData.put("token", token);
+            jGcmData.put("userId", userId);
 
             // Create connection to send GCM Message request.
-            URL url = new URL("http://www.medikeen.com/android_api/pharmacy/savegcmtoken.php");
+            URL url = new URL("http://www.medikeen.com/android_api/userprofile/savegcmtoken.php");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestProperty("Authorization", "Basic " + sessionId);
+//            conn.setRequestProperty("Authorization", "Basic " + sessionId);
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setRequestMethod("POST");
             conn.setDoOutput(true);

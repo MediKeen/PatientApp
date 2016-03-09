@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.medikeen.R;
 import com.squareup.picasso.Picasso;
@@ -25,6 +27,11 @@ public class HistoryDetailActivity extends AppCompatActivity {
 
     ImageViewTouch historyImage;
 
+    String orderNumberStr, orderStatusStr;
+
+    LinearLayout statusHolder;
+    TextView orderNumber, orderStatus, patientName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +39,20 @@ public class HistoryDetailActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        orderNumberStr = getIntent().getStringExtra("ORDER NUMBER");
+        orderStatusStr = getIntent().getStringExtra("ORDER STATUS");
+
         resourceId = getIntent().getStringExtra("resource_id");
         resourceType = getIntent().getStringExtra("resource_type");
+
+        statusHolder = (LinearLayout) findViewById(R.id.status_holder);
+        orderNumber = (TextView) findViewById(R.id.order_number);
+        orderStatus = (TextView) findViewById(R.id.order_status);
+        patientName = (TextView) findViewById(R.id.patient_name);
+
+//        orderNumber.setText("Order Number: " + orderNumberStr);
+//        orderStatus.setText("Order Status: " + orderStatusStr);
+//        patientName.setText("Patient Name: " + "");
 
         historyImage = (ImageViewTouch) findViewById(R.id.history_image);
 

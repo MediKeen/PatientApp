@@ -1,24 +1,28 @@
 {
   "project_info": {
-    "project_id": "medikeen-pharmacy",
-    "project_number": "753804330216",
-    "name": "MediKeen Pharmacy"
+    "project_id": "medikeen",
+    "project_number": "983645890008",
+    "name": "MediKeen"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:753804330216:android:adde9c8c250c7531",
-        "client_id": "android:com.medikeen",
+        "mobilesdk_app_id": "1:983645890008:android:af6bcc2f0235bf2f",
+        "client_id": "android:com.medikeen.patient",
         "client_type": 1,
         "android_client_info": {
-          "package_name": "com.medikeen"
+          "package_name": "com.medikeen.patient",
+          "certificate_hash": []
         }
       },
       "oauth_client": [],
       "api_key": [],
       "services": {
         "analytics_service": {
-          "status": 1
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-73114003-1"
+          }
         },
         "cloud_messaging_service": {
           "status": 2,
