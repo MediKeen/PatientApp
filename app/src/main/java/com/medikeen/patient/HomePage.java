@@ -191,9 +191,8 @@ public class HomePage extends AppCompatActivity implements OnClickListener {
 
 
 		/*
-		 * To apply a arraylist of histoy of user copy following code in onPostExecute of HistoryTask
+		 * To apply a arraylist of history of user copy following code in onPostExecute of HistoryTask
 		 * Just pass thr arralist that you got from server
-		 * 
 		 */
         //------------Manipulate if any histoy found in historytask onPostExecute----//
         //------------Else shows image only--------------------
