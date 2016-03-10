@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.dataModel.UploadedPrescriptionData;
 
 import java.util.ArrayList;

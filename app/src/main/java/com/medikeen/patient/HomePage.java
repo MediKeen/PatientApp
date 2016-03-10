@@ -28,7 +28,7 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.adapters.PrescriptionAdapter;
 import com.medikeen.asyncTask.SearchTask;
 import com.medikeen.asyncTask.SendPrescriptionTask;

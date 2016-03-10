@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.dataModel.LoginModel;
 import com.medikeen.datamodels.serialized.LoginResponse;
 import com.medikeen.datamodels.serialized.UserResponse;

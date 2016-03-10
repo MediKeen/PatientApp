@@ -16,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.util.SessionManager;
 
 public class MainActivity extends AppCompatActivity

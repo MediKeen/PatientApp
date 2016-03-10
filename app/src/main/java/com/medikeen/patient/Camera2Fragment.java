@@ -59,7 +59,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.medikeen.Camera.AutoFitTextureView;
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

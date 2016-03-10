@@ -13,7 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.OTPVerificationAsyncTask;
 import com.medikeen.dataModel.OTPModel;
 import com.medikeen.util.ConnectionDetector;

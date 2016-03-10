@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.FeedbackUploadTask;
 import com.medikeen.dataModel.FeedbackModel;
 import com.medikeen.util.SessionManager;

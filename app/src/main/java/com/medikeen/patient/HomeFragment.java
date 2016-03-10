@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.util.ViewPagerAdapter;
 
 public class HomeFragment extends Fragment {

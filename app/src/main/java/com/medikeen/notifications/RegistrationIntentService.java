@@ -10,7 +10,7 @@ import android.util.Log;
 import com.google.android.gms.gcm.GcmPubSub;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.util.SessionManager;
 
 import org.apache.commons.io.IOUtils;

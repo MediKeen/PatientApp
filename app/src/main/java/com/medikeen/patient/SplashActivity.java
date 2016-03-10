@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.datamodels.User;
 import com.medikeen.util.ConnectionDetector;
 import com.medikeen.util.SessionManager;

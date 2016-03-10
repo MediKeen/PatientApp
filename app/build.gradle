@@ -4,11 +4,11 @@ android {
     compileSdkVersion 23
     buildToolsVersion '23.0.2'
     defaultConfig {
-        applicationId "com.medikeen"
+        applicationId "com.medikeen.patient"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 6
+        versionName "0.0.0.0.6"
     }
     buildTypes {
         release {

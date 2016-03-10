@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 public class LoadingScreenActivity extends AppCompatActivity {
 	

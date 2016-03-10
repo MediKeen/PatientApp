@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.dataModel.HistoryModel;
 import com.squareup.picasso.Picasso;
 

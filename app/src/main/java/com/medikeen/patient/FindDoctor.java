@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.SearchTask;
 import com.medikeen.dataModel.SearchModel;
 

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 public class ButtonFloatSmall extends ButtonFloat {
 	

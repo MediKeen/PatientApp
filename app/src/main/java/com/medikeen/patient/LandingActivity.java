@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.adapters.CustomDrawerAdapter;
 import com.medikeen.adapters.DrawerItem;
 import com.medikeen.util.SessionManager;

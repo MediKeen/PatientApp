@@ -26,7 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.LoginTask;
 import com.medikeen.dataModel.LoginModel;
 import com.medikeen.datamodels.User;

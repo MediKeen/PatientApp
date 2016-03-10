@@ -15,7 +15,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.dataModel.DoctorDTO;
 
 import java.io.IOException;

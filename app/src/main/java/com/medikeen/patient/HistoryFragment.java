@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.adapters.HistoryAdapter;
 import com.medikeen.asyncTask.HistoryAsyncTask;
 import com.medikeen.dataModel.HistoryModel;

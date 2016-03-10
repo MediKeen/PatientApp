@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 public class CameraActivity extends FragmentActivity {
 

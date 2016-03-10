@@ -48,7 +48,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.dataModel.PrescriptionModel;
 import com.medikeen.datamodels.User;
 import com.medikeen.util.ButtonFloat;

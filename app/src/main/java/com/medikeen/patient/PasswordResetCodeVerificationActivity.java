@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.PasswordResetCodeVerificationAsyncTask;
 import com.medikeen.dataModel.ResetPasswordModel;
 

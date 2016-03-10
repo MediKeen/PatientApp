@@ -20,7 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.RegisterTask;
 import com.medikeen.dataModel.RegisterModel;
 import com.medikeen.datamodels.serialized.RegistrationResponse;

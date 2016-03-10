@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.dataModel.DoctorDTO;
 import com.medikeen.patient.DoctorProfile;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;

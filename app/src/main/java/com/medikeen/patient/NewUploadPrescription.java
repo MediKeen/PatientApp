@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 public class NewUploadPrescription extends Fragment implements OnClickListener {
 

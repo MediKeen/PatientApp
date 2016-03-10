@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.GridView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.adapters.GridViewCustomAdapter;
 import com.medikeen.dataModel.DoctorDTO;
 import com.medikeen.dataModel.SearchModel;

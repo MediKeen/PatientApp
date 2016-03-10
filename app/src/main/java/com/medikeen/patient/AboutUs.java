@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 public class AboutUs extends Fragment {
 

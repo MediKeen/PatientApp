@@ -14,7 +14,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 public abstract class Button extends CustomView {
 

@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.adapters.PrescriptionTabAdapter;
 import com.medikeen.dataModel.PatientDescriptionDTO;
 import com.medikeen.dataModel.PrescriptionDTO;

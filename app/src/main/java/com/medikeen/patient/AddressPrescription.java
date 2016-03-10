@@ -22,7 +22,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 import com.medikeen.asyncTask.SaveImageDetailsTask;
 import com.medikeen.dataModel.SaveImageDetailsModel;
 import com.medikeen.datamodels.User;

@@ -2,7 +2,7 @@ package com.medikeen.util;
 
 import android.app.Application;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;

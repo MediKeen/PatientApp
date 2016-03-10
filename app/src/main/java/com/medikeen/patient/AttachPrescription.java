@@ -32,7 +32,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.medikeen.R;
+import com.medikeen.patient.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
