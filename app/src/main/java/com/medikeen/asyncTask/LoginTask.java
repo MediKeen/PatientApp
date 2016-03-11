@@ -9,7 +9,10 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.gson.Gson;
+import com.medikeen.notifications.RegistrationIntentService;
 import com.medikeen.patient.R;
 import com.medikeen.dataModel.LoginModel;
 import com.medikeen.datamodels.serialized.LoginResponse;
@@ -33,6 +36,7 @@ import java.util.Iterator;
 
 public class LoginTask extends AsyncTask<LoginModel, String, String> {
 
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     Activity mLogin;
     ProgressDialog pd;
     String jsonResponseString;
@@ -74,6 +78,11 @@ public class LoginTask extends AsyncTask<LoginModel, String, String> {
 //                mLogin.startActivity(intent);
 //                mLogin.finish();
 
+                if (checkPlayServices()) {
+                    // Start IntentService to register this application with GCM.
+                    Intent intent = new Intent(mLogin, RegistrationIntentService.class);
+                    mLogin.startService(intent);
+                }
 
                 Intent intent = new Intent(mLogin,
                         MainActivity.class);
@@ -242,6 +251,21 @@ public class LoginTask extends AsyncTask<LoginModel, String, String> {
 //            e.printStackTrace();
 //        }
         return jsonResponseString;
+    }
+
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(mLogin);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(mLogin, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
+                        .show();
+            } else {
+                Log.i("LoginTask", "This device is not supported.");
+            }
+            return false;
+        }
+        return true;
     }
 
 }
