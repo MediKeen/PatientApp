@@ -11,6 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GcmListenerService;
+import com.medikeen.patient.HistoryDetailActivity;
 import com.medikeen.patient.R;
 import com.medikeen.patient.MainActivity;
 
@@ -84,10 +85,11 @@ public class MyGcmListenerService extends GcmListenerService {
             recepientName = jsonObject.getString("recepientName");
 //            }
 
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, HistoryDetailActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("ORDER NUMBER", number);
             intent.putExtra("ORDER STATUS", status);
+            intent.putExtra("RECIPIENT NAME", recepientName);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                     PendingIntent.FLAG_ONE_SHOT);
@@ -96,7 +98,7 @@ public class MyGcmListenerService extends GcmListenerService {
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                     .setSmallIcon(R.drawable.ic_menu_gallery)
                     .setContentTitle("MediKeen")
-                    .setContentText("The status of your order no. " + number + " for "+ recepientName +" has been updated to " + status)
+                    .setContentText("The status of your order no. " + number + " for " + recepientName + " has been updated to " + status)
                     .setAutoCancel(true)
                     .setSound(defaultSoundUri)
                     .setContentIntent(pendingIntent);

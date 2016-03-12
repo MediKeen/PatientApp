@@ -1,20 +1,12 @@
 package com.medikeen.patient;
 
-import android.graphics.Matrix;
-import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.FloatMath;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.medikeen.patient.R;
 import com.squareup.picasso.Picasso;
 
 import it.sephiroth.android.library.imagezoom.ImageViewTouch;
@@ -23,11 +15,9 @@ public class HistoryDetailActivity extends AppCompatActivity {
 
     private String TAG = "HISTORY DETAIL ACTIVITY";
 
-    String resourceId, resourceType;
-
     ImageViewTouch historyImage;
 
-    String orderNumberStr, orderStatusStr;
+    String orderNumberStr, orderStatusStr, recipientName;
 
     LinearLayout statusHolder;
     TextView orderNumber, orderStatus, patientName;
@@ -41,26 +31,22 @@ public class HistoryDetailActivity extends AppCompatActivity {
 
         orderNumberStr = getIntent().getStringExtra("ORDER NUMBER");
         orderStatusStr = getIntent().getStringExtra("ORDER STATUS");
-
-        resourceId = getIntent().getStringExtra("resource_id");
-        resourceType = getIntent().getStringExtra("resource_type");
+        recipientName = getIntent().getStringExtra("RECIPIENT NAME");
 
         statusHolder = (LinearLayout) findViewById(R.id.status_holder);
         orderNumber = (TextView) findViewById(R.id.order_number);
         orderStatus = (TextView) findViewById(R.id.order_status);
         patientName = (TextView) findViewById(R.id.patient_name);
 
-//        orderNumber.setText("Order Number: " + orderNumberStr);
-//        orderStatus.setText("Order Status: " + orderStatusStr);
-//        patientName.setText("Patient Name: " + "");
+        orderNumber.setText("Order Number: " + orderNumberStr);
+        orderStatus.setText("Order Status: " + orderStatusStr);
+        patientName.setText("Patient Name: " + recipientName);
 
         historyImage = (ImageViewTouch) findViewById(R.id.history_image);
 
         Picasso.with(HistoryDetailActivity.this)
                 .load("http://www.medikeen.com/android_api/prescription/uploads/"
-                        + resourceId + "." + resourceType).into(historyImage);
-
-//        historyImage.setOnTouchListener(this);
+                        + orderNumberStr).into(historyImage);
 
     }
 

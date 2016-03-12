@@ -61,13 +61,13 @@
     <string name="crash_toast_text">Application crashed. Please try again.</string>
     <string name="take_picture">Take!</string>
     <string name="title_activity_registration">Registration</string>
-    <string name="title_activity_frogot_password">Frogot Password</string>
+    <string name="title_activity_frogot_password">Forgot Password</string>
     <string name="title_activity_attach_prescription">Attach Prescription</string>
     <string name="title_activity_address_prescription">Address Prescription</string>
-    <string name="title_activity_password_reset_code_verification">PasswordResetCodeVerificationActivity</string>
-    <string name="title_activity_new_password">NewPasswordActivity</string>
-    <string name="title_activity_user_profile">UserProfileActivity</string>
-    <string name="title_activity_history_detail">HistoryDetailActivity</string>
-    <string name="title_activity_otp">OtpActivity</string>
+    <string name="title_activity_password_reset_code_verification">Password Reset Code</string>
+    <string name="title_activity_new_password">New Password</string>
+    <string name="title_activity_user_profile">User Profile</string>
+    <string name="title_activity_history_detail">History Detail</string>
+    <string name="title_activity_otp">OTP</string>
     <string name="title_activity_splash">SplashActivity</string>
 </resources>

@@ -92,10 +92,10 @@ public class HistoryFragment extends Fragment {
                                     int position, long id) {
                 Intent historyDetailIntent = new Intent(HistoryFragment.this
                         .getActivity(), HistoryDetailActivity.class);
-                historyDetailIntent.putExtra("resource_id",
+                historyDetailIntent.putExtra("ORDER NUMBER",
                         historyList.get(position).getResourceId());
-                historyDetailIntent.putExtra("resource_type",
-                        historyList.get(position).getResourceType());
+                historyDetailIntent.putExtra("ORDER STATUS", "");
+                historyDetailIntent.putExtra("RECIPIENT NAME", historyList.get(position).getRecepientName());
                 startActivity(historyDetailIntent);
             }
         });
