@@ -218,7 +218,7 @@ public class AddressPrescription extends AppCompatActivity implements OnClickLis
                 return;
             }
 
-            String address = editTextDoctorAdd.getText().toString();
+            String address = editTextDoctorAdd.getText().toString() + " " + editTextPinCode.getText().toString();
             String offer = radioButtonFifteen.isChecked() ? "3 hours delivery"
                     : "8 hours delivery";
 
