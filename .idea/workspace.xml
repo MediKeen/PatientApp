@@ -21,32 +21,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e2e93d-eda6-42a2-b677-403c346ea5e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/adapters/HistoryAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/adapters/HistoryAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/asyncTask/HistoryAsyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/asyncTask/HistoryAsyncTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/HistoryDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/HistoryDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/HistoryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/HistoryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonLibrary/src/main/java/com/medikeen/dataModel/HistoryModel.java" afterPath="$PROJECT_DIR$/commonLibrary/src/main/java/com/medikeen/dataModel/HistoryModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/Login.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/asyncTask/LoginTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/asyncTask/LoginTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/notifications/MyGcmListenerService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/notifications/MyGcmListenerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/SplashActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_history_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/activity_history_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/history_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/history_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/history_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/history_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/history_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/history_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/history_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/history_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/imagezoom_2_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/imagezoom_2_2_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/new_address_prescription.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/new_address_prescription.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/new_address_prescription.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/new_address_prescription.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/new_address_prescription.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xhdpi/new_address_prescription.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/new_address_prescription.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/new_address_prescription.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_8_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_8_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_8_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v13_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v13_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PatientApp.iws" />
@@ -100,8 +74,8 @@
       <file leaf-file-name="HistoryDetailActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/HistoryDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39285713">
-              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.54464287">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -3576,7 +3550,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457761528848</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Cost fields all across the app. Pincode keyboard change. OrderStatus from history list. RegisterIntent called at MainActivity.">
+      <created>1457896389152</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1457896389152</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3638,7 +3618,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes by varun" />
     <MESSAGE value="Notification takes to History Details Page. Changed Page Names. Table updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Notification takes to History Details Page. Changed Page Names. Table updates." />
+    <MESSAGE value="Added Cost fields all across the app. Pincode keyboard change. OrderStatus from history list. RegisterIntent called at MainActivity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Cost fields all across the app. Pincode keyboard change. OrderStatus from history list. RegisterIntent called at MainActivity." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3672,6 +3653,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3679,6 +3661,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3709,6 +3692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3730,6 +3714,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3886,6 +3871,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030357143">
           <caret line="124" column="12" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3893,6 +3881,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3900,6 +3891,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3907,6 +3901,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2125">
           <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+          <folding>
+            <element signature="e#2184#2215#0" expanded="true" />
+            <element signature="e#2217#2249#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4097,8 +4095,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/medikeen/patient/HistoryDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39285713">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.54464287">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
           <folding />
         </state>
       </provider>
