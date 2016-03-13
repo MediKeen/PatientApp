@@ -72,12 +72,6 @@ public class LoginTask extends AsyncTask<LoginModel, String, String> {
                 Toast.makeText(mLogin, "Welcome " + user.name, Toast.LENGTH_SHORT)
                         .show();
 
-//                Intent intent = new Intent(mLogin,
-//                        LandingActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                mLogin.startActivity(intent);
-//                mLogin.finish();
-
                 if (checkPlayServices()) {
                     // Start IntentService to register this application with GCM.
                     Intent intent = new Intent(mLogin, RegistrationIntentService.class);

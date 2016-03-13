@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.medikeen.patient.R;
 import com.medikeen.adapters.HistoryAdapter;
 import com.medikeen.asyncTask.HistoryAsyncTask;
 import com.medikeen.dataModel.HistoryModel;
@@ -94,8 +93,9 @@ public class HistoryFragment extends Fragment {
                         .getActivity(), HistoryDetailActivity.class);
                 historyDetailIntent.putExtra("ORDER NUMBER",
                         historyList.get(position).getResourceId());
-                historyDetailIntent.putExtra("ORDER STATUS", "");
+                historyDetailIntent.putExtra("ORDER STATUS", historyList.get(position).getOrderStatus());
                 historyDetailIntent.putExtra("RECIPIENT NAME", historyList.get(position).getRecepientName());
+                historyDetailIntent.putExtra("COST", historyList.get(position).getCost());
                 startActivity(historyDetailIntent);
             }
         });

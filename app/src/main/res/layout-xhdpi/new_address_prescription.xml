@@ -38,7 +38,8 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/currencyconvertereditext"
             android:hint="Pincode"
-            android:maxLines="2"
+            android:inputType="number"
+            android:singleLine="true"
             android:textColorHint="#9e9e9e" />
 
         <View

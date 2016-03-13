@@ -133,6 +133,8 @@ public class HistoryAsyncTask extends AsyncTask<String[], String, String> {
             inputStream.close();
             jsonResposnseString = stringBuilder.toString();
 
+            Log.e("HISTORY LIST: ", "HISTORY LIST: " + jsonResposnseString);
+
         } catch (Exception e) {
             Log.e("STRING BUILDER ERROR: ", "STRING BUILDER ERROR: " + e);
         }
@@ -254,11 +256,15 @@ public class HistoryAsyncTask extends AsyncTask<String[], String, String> {
                             .getString("created_date");
                     String updated_date = prescriptionsObject
                             .getString("updated_date");
+                    String order_status = prescriptionsObject
+                            .getString("order_status");
+                    String cost = prescriptionsObject
+                            .getString("cost");
 
                     historyList.add(new HistoryModel(person_id, resource_id,
                             resource_type, recepient_name, recepient_address,
                             recepient_number, offer_type, is_image_uploaded,
-                            is_email_sent, created_date, updated_date));
+                            is_email_sent, created_date, updated_date, order_status, cost));
                 }
 
             } catch (JSONException e) {

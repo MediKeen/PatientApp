@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.medikeen.patient.R;
 import com.medikeen.datamodels.User;
 import com.medikeen.util.ConnectionDetector;
 import com.medikeen.util.SessionManager;
@@ -48,12 +47,8 @@ public class SplashActivity extends AppCompatActivity {
                                 "Welcome " + user.getFirstName(),
                                 Toast.LENGTH_SHORT).show();
 
-//                        Intent intent = new Intent(SplashActivity.this,
-//                                LandingActivity.class);
-
                         Intent intent = new Intent(SplashActivity.this,
                                 MainActivity.class);
-
                         startActivity(intent);
                         finish();
                     } else {

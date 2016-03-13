@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,10 +18,10 @@ public class HistoryDetailActivity extends AppCompatActivity {
 
     ImageViewTouch historyImage;
 
-    String orderNumberStr, orderStatusStr, recipientName;
+    String orderNumberStr, orderStatusStr, recipientName, cost;
 
     LinearLayout statusHolder;
-    TextView orderNumber, orderStatus, patientName;
+    TextView orderNumber, orderStatus, patientName, orderCost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +33,24 @@ public class HistoryDetailActivity extends AppCompatActivity {
         orderNumberStr = getIntent().getStringExtra("ORDER NUMBER");
         orderStatusStr = getIntent().getStringExtra("ORDER STATUS");
         recipientName = getIntent().getStringExtra("RECIPIENT NAME");
+        cost = getIntent().getStringExtra("COST");
 
         statusHolder = (LinearLayout) findViewById(R.id.status_holder);
         orderNumber = (TextView) findViewById(R.id.order_number);
         orderStatus = (TextView) findViewById(R.id.order_status);
         patientName = (TextView) findViewById(R.id.patient_name);
+        orderCost = (TextView) findViewById(R.id.order_cost);
+
+        if (Double.valueOf(cost) == 0.0) {
+            orderCost.setVisibility(View.GONE);
+        } else {
+            orderCost.setVisibility(View.VISIBLE);
+        }
 
         orderNumber.setText("Order Number: " + orderNumberStr);
         orderStatus.setText("Order Status: " + orderStatusStr);
         patientName.setText("Patient Name: " + recipientName);
+        orderCost.setText("Order Cost: Rs. " + Double.valueOf(cost));
 
         historyImage = (ImageViewTouch) findViewById(R.id.history_image);
 

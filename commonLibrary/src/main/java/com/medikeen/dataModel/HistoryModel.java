@@ -2,158 +2,176 @@ package com.medikeen.dataModel;
 
 public class HistoryModel {
 
-	private String tag, success, error, personId;
+    private String tag, success, error, personId;
 
-	private String resourceId, resourceType, recepientName, recepientAddress, recepientNumber, offerType,
-			isImageUploaded, isEmailSent, created_Date, updatedDate;
+    private String resourceId, resourceType, recepientName, recepientAddress, recepientNumber, offerType,
+            isImageUploaded, isEmailSent, created_Date, updatedDate, orderStatus, cost;
 
-	public HistoryModel(String personId, String resourceId, String resourceType, String recepientName,
-			String recepientAddress, String recepientNumber, String offerType, String isImageUploaded,
-			String isEmailSent, String created_Date, String updatedDate) {
-		super();
-		this.personId = personId;
-		this.resourceId = resourceId;
-		this.resourceType = resourceType;
-		this.recepientName = recepientName;
-		this.recepientAddress = recepientAddress;
-		this.recepientNumber = recepientNumber;
-		this.offerType = offerType;
-		this.isImageUploaded = isImageUploaded;
-		this.isEmailSent = isEmailSent;
-		this.created_Date = created_Date;
-		this.updatedDate = updatedDate;
-	}
+    public HistoryModel(String personId, String resourceId, String resourceType, String recepientName,
+                        String recepientAddress, String recepientNumber, String offerType, String isImageUploaded,
+                        String isEmailSent, String created_Date, String updatedDate, String orderStatus, String cost) {
+        super();
+        this.personId = personId;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.recepientName = recepientName;
+        this.recepientAddress = recepientAddress;
+        this.recepientNumber = recepientNumber;
+        this.offerType = offerType;
+        this.isImageUploaded = isImageUploaded;
+        this.isEmailSent = isEmailSent;
+        this.created_Date = created_Date;
+        this.updatedDate = updatedDate;
+        this.orderStatus = orderStatus;
+        this.cost = cost;
+    }
 
-	public HistoryModel(String tag, String success, String error, String personId, String resourceId,
-			String resourceType, String recepientName, String recepientAddress, String recepientNumber,
-			String offerType, String isImageUploaded, String isEmailSent, String created_Date, String updatedDate) {
-		super();
-		this.tag = tag;
-		this.success = success;
-		this.error = error;
-		this.personId = personId;
-		this.resourceId = resourceId;
-		this.resourceType = resourceType;
-		this.recepientName = recepientName;
-		this.recepientAddress = recepientAddress;
-		this.recepientNumber = recepientNumber;
-		this.offerType = offerType;
-		this.isImageUploaded = isImageUploaded;
-		this.isEmailSent = isEmailSent;
-		this.created_Date = created_Date;
-		this.updatedDate = updatedDate;
-	}
+    public HistoryModel(String tag, String success, String error, String personId, String resourceId,
+                        String resourceType, String recepientName, String recepientAddress, String recepientNumber,
+                        String offerType, String isImageUploaded, String isEmailSent, String created_Date, String updatedDate) {
+        super();
+        this.tag = tag;
+        this.success = success;
+        this.error = error;
+        this.personId = personId;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.recepientName = recepientName;
+        this.recepientAddress = recepientAddress;
+        this.recepientNumber = recepientNumber;
+        this.offerType = offerType;
+        this.isImageUploaded = isImageUploaded;
+        this.isEmailSent = isEmailSent;
+        this.created_Date = created_Date;
+        this.updatedDate = updatedDate;
+    }
 
-	public String getTag() {
-		return tag;
-	}
+    public String getCost() {
+        return cost;
+    }
 
-	public void setTag(String tag) {
-		this.tag = tag;
-	}
+    public void setCost(String cost) {
+        this.cost = cost;
+    }
 
-	public String getSuccess() {
-		return success;
-	}
+    public String getOrderStatus() {
+        return orderStatus;
+    }
 
-	public void setSuccess(String success) {
-		this.success = success;
-	}
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 
-	public String getError() {
-		return error;
-	}
+    public String getTag() {
+        return tag;
+    }
 
-	public void setError(String error) {
-		this.error = error;
-	}
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
 
-	public String getPersonId() {
-		return personId;
-	}
+    public String getSuccess() {
+        return success;
+    }
 
-	public void setPersonId(String personId) {
-		this.personId = personId;
-	}
+    public void setSuccess(String success) {
+        this.success = success;
+    }
 
-	public String getResourceId() {
-		return resourceId;
-	}
+    public String getError() {
+        return error;
+    }
 
-	public void setResourceId(String resourceId) {
-		this.resourceId = resourceId;
-	}
+    public void setError(String error) {
+        this.error = error;
+    }
 
-	public String getResourceType() {
-		return resourceType;
-	}
+    public String getPersonId() {
+        return personId;
+    }
 
-	public void setResourceType(String resourceType) {
-		this.resourceType = resourceType;
-	}
+    public void setPersonId(String personId) {
+        this.personId = personId;
+    }
 
-	public String getRecepientName() {
-		return recepientName;
-	}
+    public String getResourceId() {
+        return resourceId;
+    }
 
-	public void setRecepientName(String recepientName) {
-		this.recepientName = recepientName;
-	}
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+    }
 
-	public String getRecepientAddress() {
-		return recepientAddress;
-	}
+    public String getResourceType() {
+        return resourceType;
+    }
 
-	public void setRecepientAddress(String recepientAddress) {
-		this.recepientAddress = recepientAddress;
-	}
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+    }
 
-	public String getRecepientNumber() {
-		return recepientNumber;
-	}
+    public String getRecepientName() {
+        return recepientName;
+    }
 
-	public void setRecepientNumber(String recepientNumber) {
-		this.recepientNumber = recepientNumber;
-	}
+    public void setRecepientName(String recepientName) {
+        this.recepientName = recepientName;
+    }
 
-	public String getOfferType() {
-		return offerType;
-	}
+    public String getRecepientAddress() {
+        return recepientAddress;
+    }
 
-	public void setOfferType(String offerType) {
-		this.offerType = offerType;
-	}
+    public void setRecepientAddress(String recepientAddress) {
+        this.recepientAddress = recepientAddress;
+    }
 
-	public String getIsImageUploaded() {
-		return isImageUploaded;
-	}
+    public String getRecepientNumber() {
+        return recepientNumber;
+    }
 
-	public void setIsImageUploaded(String isImageUploaded) {
-		this.isImageUploaded = isImageUploaded;
-	}
+    public void setRecepientNumber(String recepientNumber) {
+        this.recepientNumber = recepientNumber;
+    }
 
-	public String getIsEmailSent() {
-		return isEmailSent;
-	}
+    public String getOfferType() {
+        return offerType;
+    }
 
-	public void setIsEmailSent(String isEmailSent) {
-		this.isEmailSent = isEmailSent;
-	}
+    public void setOfferType(String offerType) {
+        this.offerType = offerType;
+    }
 
-	public String getCreated_Date() {
-		return created_Date;
-	}
+    public String getIsImageUploaded() {
+        return isImageUploaded;
+    }
 
-	public void setCreated_Date(String created_Date) {
-		this.created_Date = created_Date;
-	}
+    public void setIsImageUploaded(String isImageUploaded) {
+        this.isImageUploaded = isImageUploaded;
+    }
 
-	public String getUpdatedDate() {
-		return updatedDate;
-	}
+    public String getIsEmailSent() {
+        return isEmailSent;
+    }
 
-	public void setUpdatedDate(String updatedDate) {
-		this.updatedDate = updatedDate;
-	}
+    public void setIsEmailSent(String isEmailSent) {
+        this.isEmailSent = isEmailSent;
+    }
+
+    public String getCreated_Date() {
+        return created_Date;
+    }
+
+    public void setCreated_Date(String created_Date) {
+        this.created_Date = created_Date;
+    }
+
+    public String getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(String updatedDate) {
+        this.updatedDate = updatedDate;
+    }
 
 }

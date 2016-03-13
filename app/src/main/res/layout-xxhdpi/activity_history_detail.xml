@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="Order Number: 451"
             android:textColor="@android:color/white"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/patient_name"
@@ -37,7 +37,7 @@
             android:layout_marginTop="10dp"
             android:text="Patient Name: Varun Barve"
             android:textColor="@android:color/white"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/order_status"
@@ -46,7 +46,16 @@
             android:layout_marginTop="10dp"
             android:text="Order Status: New"
             android:textColor="@android:color/white"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/order_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Rs. 777"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

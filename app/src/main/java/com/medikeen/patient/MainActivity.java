@@ -12,15 +12,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.medikeen.patient.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.medikeen.notifications.RegistrationIntentService;
 import com.medikeen.util.SessionManager;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
     Fragment fragment;
     SessionManager sessionManager;
@@ -58,6 +63,12 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        // REGISTER FOR NOTIFICATIONS
+        if (checkPlayServices()) {
+            // Start IntentService to register this application with GCM.
+            Intent intent = new Intent(MainActivity.this, RegistrationIntentService.class);
+            startService(intent);
+        }
 
         if (savedInstanceState == null) {
             // ATTACH HOME FRAGMENT
@@ -70,6 +81,21 @@ public class MainActivity extends AppCompatActivity
         } else {
             homeFragment = (HomeFragment) getSupportFragmentManager().getFragments().get(0);
         }
+    }
+
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(MainActivity.this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(MainActivity.this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
+                        .show();
+            } else {
+                Log.i("LoginTask", "This device is not supported.");
+            }
+            return false;
+        }
+        return true;
     }
 
     @Override

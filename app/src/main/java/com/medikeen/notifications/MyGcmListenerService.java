@@ -22,7 +22,7 @@ import org.json.JSONObject;
 
 /**
  * Created by Varun on 3/3/2016.
- *
+ * <p/>
  * This class listens for GCM message and then sends appropriate user notification
  */
 public class MyGcmListenerService extends GcmListenerService {
@@ -46,9 +46,9 @@ public class MyGcmListenerService extends GcmListenerService {
         sendNotification(message);
 
         //if (from.startsWith("/topics/")) {
-            // message received from some topic.
+        // message received from some topic.
         //} else {
-            // normal downstream message.
+        // normal downstream message.
         //}
 
         // [START_EXCLUDE]
@@ -75,24 +75,24 @@ public class MyGcmListenerService extends GcmListenerService {
      */
     private void sendNotification(String message) {
 
-        String number, status, recepientName, orderStatusMessage;
+        String number, status, recepientName, orderStatusMessage, cost;
 
         try {
 
-//            for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = new JSONObject(message);
 
             number = jsonObject.getString("orderNumber");
             status = jsonObject.getString("orderStatus");
             recepientName = jsonObject.getString("recepientName");
             orderStatusMessage = jsonObject.getString("orderStatusMessage");
-//            }
+            cost = "";
 
             Intent intent = new Intent(this, HistoryDetailActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("ORDER NUMBER", number);
-            intent.putExtra("ORDER STATUS", status);
+            intent.putExtra("ORDER STATUS", orderStatusMessage);
             intent.putExtra("RECIPIENT NAME", recepientName);
+            intent.putExtra("COST", cost);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                     PendingIntent.FLAG_ONE_SHOT);
@@ -101,7 +101,7 @@ public class MyGcmListenerService extends GcmListenerService {
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                     .setSmallIcon(R.drawable.ic_menu_gallery)
                     .setContentTitle("MediKeen")
-                    .setContentText("Order no. " + number + ": "+ orderStatusMessage)
+                    .setContentText("Order no. " + number + ": " + orderStatusMessage)
                     .setAutoCancel(true)
                     .setSound(defaultSoundUri)
                     .setContentIntent(pendingIntent);

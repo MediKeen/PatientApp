@@ -88,7 +88,6 @@ public class Login extends AppCompatActivity implements OnClickListener {
             Toast.makeText(getApplicationContext(),
                     "Welcome " + user.getFirstName(), Toast.LENGTH_SHORT)
                     .show();
-//			Intent intent = new Intent(Login.this, LandingActivity.class);
             Intent intent = new Intent(Login.this, MainActivity.class);
             startActivity(intent);
             finish();

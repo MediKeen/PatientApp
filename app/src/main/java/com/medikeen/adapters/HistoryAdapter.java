@@ -44,9 +44,10 @@ public class HistoryAdapter extends ArrayAdapter<HistoryModel> {
             holder.number = (TextView) convertView.findViewById(R.id.rec_number);
             holder.offer = (TextView) convertView.findViewById(R.id.rec_offer);
             holder.date = (TextView) convertView.findViewById(R.id.rec_date);
+            holder.orderNumber = (TextView) convertView.findViewById(R.id.hist_order_number);
+            holder.cost = (TextView) convertView.findViewById(R.id.rec_cost);
 
             convertView.setTag(holder);
-
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
@@ -58,6 +59,15 @@ public class HistoryAdapter extends ArrayAdapter<HistoryModel> {
         holder.address.setText(list.get(position).getRecepientAddress());
         holder.number.setText(list.get(position).getRecepientNumber());
         holder.offer.setText(list.get(position).getOfferType());
+        holder.orderNumber.setText("Order Number: " + list.get(position).getResourceId());
+
+        if (Double.valueOf(list.get(position).getCost()) == 0.0) {
+            holder.cost.setVisibility(View.GONE);
+        } else {
+            holder.cost.setVisibility(View.VISIBLE);
+        }
+
+        holder.cost.setText("Rs. " + Double.valueOf(list.get(position).getCost()));
 //        holder.date.setText(list.get(position).getCreated_Date());
 
         try {
@@ -76,7 +86,7 @@ public class HistoryAdapter extends ArrayAdapter<HistoryModel> {
 
     class ViewHolder {
         ImageView historyImage;
-        TextView name, address, number, offer, date;
+        TextView name, address, number, offer, date, orderNumber, cost;
     }
 
 }
