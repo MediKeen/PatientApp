@@ -41,7 +41,7 @@ public class HistoryDetailActivity extends AppCompatActivity {
         patientName = (TextView) findViewById(R.id.patient_name);
         orderCost = (TextView) findViewById(R.id.order_cost);
 
-        if (Double.valueOf(cost) == 0.0) {
+        if (cost.isEmpty() || Double.valueOf(cost) == 0.0) {
             orderCost.setVisibility(View.GONE);
         } else {
             orderCost.setVisibility(View.VISIBLE);
