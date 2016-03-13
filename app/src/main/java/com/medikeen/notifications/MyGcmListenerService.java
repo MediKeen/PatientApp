@@ -22,6 +22,8 @@ import org.json.JSONObject;
 
 /**
  * Created by Varun on 3/3/2016.
+ *
+ * This class listens for GCM message and then sends appropriate user notification
  */
 public class MyGcmListenerService extends GcmListenerService {
 
@@ -43,11 +45,11 @@ public class MyGcmListenerService extends GcmListenerService {
 
         sendNotification(message);
 
-        if (from.startsWith("/topics/")) {
+        //if (from.startsWith("/topics/")) {
             // message received from some topic.
-        } else {
+        //} else {
             // normal downstream message.
-        }
+        //}
 
         // [START_EXCLUDE]
         /**
@@ -73,7 +75,7 @@ public class MyGcmListenerService extends GcmListenerService {
      */
     private void sendNotification(String message) {
 
-        String number, status, recepientName;
+        String number, status, recepientName, orderStatusMessage;
 
         try {
 
@@ -83,6 +85,7 @@ public class MyGcmListenerService extends GcmListenerService {
             number = jsonObject.getString("orderNumber");
             status = jsonObject.getString("orderStatus");
             recepientName = jsonObject.getString("recepientName");
+            orderStatusMessage = jsonObject.getString("orderStatusMessage");
 //            }
 
             Intent intent = new Intent(this, HistoryDetailActivity.class);
@@ -98,7 +101,7 @@ public class MyGcmListenerService extends GcmListenerService {
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                     .setSmallIcon(R.drawable.ic_menu_gallery)
                     .setContentTitle("MediKeen")
-                    .setContentText("The status of your order no. " + number + " for " + recepientName + " has been updated to " + status)
+                    .setContentText("Order no. " + number + ": "+ orderStatusMessage)
                     .setAutoCancel(true)
                     .setSound(defaultSoundUri)
                     .setContentIntent(pendingIntent);
