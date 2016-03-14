@@ -75,7 +75,8 @@ public class MyGcmListenerService extends GcmListenerService {
      */
     private void sendNotification(String message) {
 
-        String number, status, recepientName, orderStatusMessage, cost;
+        String number, status, recepientName, orderStatusMessage;
+        double cost;
 
         try {
 
@@ -85,7 +86,7 @@ public class MyGcmListenerService extends GcmListenerService {
             status = jsonObject.getString("orderStatus");
             recepientName = jsonObject.getString("recepientName");
             orderStatusMessage = jsonObject.getString("orderStatusMessage");
-            cost = "";
+            cost = jsonObject.getDouble("cost");
 
             Intent intent = new Intent(this, HistoryDetailActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
