@@ -34,7 +34,7 @@ public class HistoryDetailActivity extends AppCompatActivity {
         orderNumberStr = getIntent().getStringExtra("ORDER NUMBER");
         orderStatusStr = getIntent().getStringExtra("ORDER STATUS");
         recipientName = getIntent().getStringExtra("RECIPIENT NAME");
-        cost = getIntent().getDoubleExtra("COST",0.0);
+        cost = getIntent().getDoubleExtra("COST", 0.0);
 
         statusHolder = (LinearLayout) findViewById(R.id.status_holder);
         orderNumber = (TextView) findViewById(R.id.order_number);
@@ -42,7 +42,7 @@ public class HistoryDetailActivity extends AppCompatActivity {
         patientName = (TextView) findViewById(R.id.patient_name);
         orderCost = (TextView) findViewById(R.id.order_cost);
 
-        if (cost  == 0.0) {
+        if (cost == 0.0) {
             orderCost.setVisibility(View.GONE);
         } else {
             orderCost.setVisibility(View.VISIBLE);
