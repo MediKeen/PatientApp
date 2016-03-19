@@ -1,5 +1,6 @@
 package com.medikeen.patient;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,6 +8,7 @@ import android.content.ContentUris;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.graphics.Bitmap;
@@ -18,6 +20,8 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
@@ -31,8 +35,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.medikeen.patient.R;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -72,6 +75,8 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
     private SimpleDateFormat dateFormat = new SimpleDateFormat(
             "yyyy-MM-dd HH:mm:ss");
     private List<String> listOfImagesPath;
+    private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
+    private final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
 
     public static Bitmap decodeSampledBitmapFromFile(String path, int reqWidth,
                                                      int reqHeight) { // BEST
@@ -701,11 +706,37 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
             public void onClick(DialogInterface dialog, int item) {
                 if (items[item].equals("Take Photo")) {
 
-                    Intent intent = new Intent(
-                            "android.media.action.IMAGE_CAPTURE");
-                    File file = new File(GridViewDemo_ImagePath + "image.jpg");
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
-                    startActivityForResult(intent, PICK_FROM_CAMERA);
+                    if (ContextCompat.checkSelfPermission(AttachPrescription.this,
+                            Manifest.permission.READ_CONTACTS)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        Log.d(TAG, "Camera permission not yet granted");
+
+                        // Should we show an explanation?
+                        if (ActivityCompat.shouldShowRequestPermissionRationale(AttachPrescription.this,
+                                Manifest.permission.READ_CONTACTS)) {
+                            Log.d(TAG, "Showing toast that camera permission is needed");
+
+                            Toast.makeText(AttachPrescription.this, "Camera permission is needed to upload an image of prescription.", Toast.LENGTH_LONG).show();
+
+                        } else {
+
+                            Log.d(TAG, "Requesting camera permission");
+                            // No explanation needed, we can request the permission.
+
+                            ActivityCompat.requestPermissions(AttachPrescription.this,
+                                    new String[]{Manifest.permission.CAMERA},
+                                    MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+
+                            Log.d(TAG, "Requested camera permission. Waiting for user response");
+
+                            // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                            // app-defined int constant. The callback method gets the
+                            // result of the request.
+                        }
+                    } else {
+                        Log.d(TAG, "Camera permission already granted");
+                        StartCameraCaptureIntent();
+                    }
 
                     // Intent cameraIntent = new Intent(AttachPrescription.this,
                     // CameraActivity.class);
@@ -732,12 +763,39 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
                     // }
 
                 } else if (items[item].equals("Choose from Library")) {
-                    Intent intent = new Intent();
-                    intent.setType("image/*");
-                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(
-                            Intent.createChooser(intent, "Select File"),
-                            PICK_FROM_FILE);
+
+                    if (ContextCompat.checkSelfPermission(AttachPrescription.this,
+                            Manifest.permission.READ_CONTACTS)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        Log.d(TAG, "Storage permission not yet granted");
+
+                        // Should we show an explanation?
+                        if (ActivityCompat.shouldShowRequestPermissionRationale(AttachPrescription.this,
+                                Manifest.permission.READ_CONTACTS)) {
+                            Log.d(TAG, "Showing toast that Storage permission is needed");
+
+                            Toast.makeText(AttachPrescription.this, "Storage permission is needed to upload an image of prescription.", Toast.LENGTH_LONG).show();
+
+                        } else {
+
+                            Log.d(TAG, "Requesting camera permission");
+                            // No explanation needed, we can request the permission.
+
+                            ActivityCompat.requestPermissions(AttachPrescription.this,
+                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+
+                            Log.d(TAG, "Requested storage permission. Waiting for user response");
+
+                            // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                            // app-defined int constant. The callback method gets the
+                            // result of the request.
+                        }
+                    } else {
+                        Log.d(TAG, "Storage permission already granted");
+                        StartIntentForSelectingImageFromFile();
+                    }
+
                 } else if (items[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
@@ -746,6 +804,62 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
 
         builder.show();
 
+    }
+
+    private void StartIntentForSelectingImageFromFile() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(
+                Intent.createChooser(intent, "Select File"),
+                PICK_FROM_FILE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    Log.d(TAG,"Camera permission granted by the user and triggered onRequestPermissionsResult");
+                    StartCameraCaptureIntent();
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            case MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    StartIntentForSelectingImageFromFile();
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
+
+    private void StartCameraCaptureIntent() {
+        Intent intent = new Intent(
+                "android.media.action.IMAGE_CAPTURE");
+        File file = new File(GridViewDemo_ImagePath + "image.jpg");
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+        startActivityForResult(intent, PICK_FROM_CAMERA);
     }
 
     private File createDirIfNotExists() {
