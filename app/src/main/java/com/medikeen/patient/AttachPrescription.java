@@ -75,7 +75,7 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
     private SimpleDateFormat dateFormat = new SimpleDateFormat(
             "yyyy-MM-dd HH:mm:ss");
     private List<String> listOfImagesPath;
-    private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
+    private final int MY_PERMISSIONS_REQUEST_TAKE_PICTURE = 0;
     private final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
 
     public static Bitmap decodeSampledBitmapFromFile(String path, int reqWidth,
@@ -725,11 +725,11 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
 
                             ActivityCompat.requestPermissions(AttachPrescription.this,
                                     new String[]{Manifest.permission.CAMERA},
-                                    MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+                                    MY_PERMISSIONS_REQUEST_TAKE_PICTURE);
 
                             Log.d(TAG, "Requested camera permission. Waiting for user response");
 
-                            // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                            // MY_PERMISSIONS_REQUEST_TAKE_PICTURE is an
                             // app-defined int constant. The callback method gets the
                             // result of the request.
                         }
@@ -765,32 +765,9 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
                 } else if (items[item].equals("Choose from Library")) {
 
                     if (ContextCompat.checkSelfPermission(AttachPrescription.this,
-                            Manifest.permission.READ_CONTACTS)
+                            Manifest.permission.READ_EXTERNAL_STORAGE)
                             != PackageManager.PERMISSION_GRANTED) {
-                        Log.d(TAG, "Storage permission not yet granted");
-
-                        // Should we show an explanation?
-                        if (ActivityCompat.shouldShowRequestPermissionRationale(AttachPrescription.this,
-                                Manifest.permission.READ_CONTACTS)) {
-                            Log.d(TAG, "Showing toast that Storage permission is needed");
-
-                            Toast.makeText(AttachPrescription.this, "Storage permission is needed to upload an image of prescription.", Toast.LENGTH_LONG).show();
-
-                        } else {
-
-                            Log.d(TAG, "Requesting camera permission");
-                            // No explanation needed, we can request the permission.
-
-                            ActivityCompat.requestPermissions(AttachPrescription.this,
-                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
-
-                            Log.d(TAG, "Requested storage permission. Waiting for user response");
-
-                            // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                            // app-defined int constant. The callback method gets the
-                            // result of the request.
-                        }
+                        RequestStoragePermission(MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
                     } else {
                         Log.d(TAG, "Storage permission already granted");
                         StartIntentForSelectingImageFromFile();
@@ -806,6 +783,33 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
 
     }
 
+    private void RequestStoragePermission(int requestCode) {
+        Log.d(TAG, "Storage permission not yet granted");
+
+        // Should we show an explanation?
+        if (ActivityCompat.shouldShowRequestPermissionRationale(AttachPrescription.this,
+                Manifest.permission.READ_CONTACTS)) {
+            Log.d(TAG, "Showing toast that Storage permission is needed");
+
+            Toast.makeText(AttachPrescription.this, "Storage permission is needed to upload an image of prescription.", Toast.LENGTH_LONG).show();
+
+        } else {
+
+            Log.d(TAG, "Requesting camera permission");
+            // No explanation needed, we can request the permission.
+
+            ActivityCompat.requestPermissions(AttachPrescription.this,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    requestCode);
+
+            Log.d(TAG, "Requested storage permission. Waiting for user response");
+
+            // MY_PERMISSIONS_REQUEST_TAKE_PICTURE is an
+            // app-defined int constant. The callback method gets the
+            // result of the request.
+        }
+    }
+
     private void StartIntentForSelectingImageFromFile() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -819,13 +823,21 @@ public class AttachPrescription extends AppCompatActivity implements OnClickList
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
+            case MY_PERMISSIONS_REQUEST_TAKE_PICTURE: {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
                     Log.d(TAG,"Camera permission granted by the user and triggered onRequestPermissionsResult");
-                    StartCameraCaptureIntent();
+
+                    if (ContextCompat.checkSelfPermission(AttachPrescription.this,
+                            Manifest.permission.READ_EXTERNAL_STORAGE)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        RequestStoragePermission(MY_PERMISSIONS_REQUEST_TAKE_PICTURE);
+                    } else {
+
+                        Log.d(TAG, "Storage permission already granted");
+                        StartCameraCaptureIntent();
+                    }
 
                 } else {
 
