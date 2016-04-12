@@ -44,7 +44,8 @@ public class AddressPrescription extends AppCompatActivity implements OnClickLis
     AutoCompleteTextView editTextDoctorAdd;
     EditText editTextPinCode;
     Button buttonUpload;
-    RadioButton radioButtonThirty, radioButtonFifteen;
+    //RadioButton radioButtonThirty
+    RadioButton radioButtonFifteen;
     RadioGroup radioGroupOffer;
     SessionManager sessionManager;
     User user;
@@ -115,7 +116,7 @@ public class AddressPrescription extends AppCompatActivity implements OnClickLis
         editTextDoctorAdd = (AutoCompleteTextView) findViewById(R.id.editTextDoctorAdd);
         radioGroupOffer = (RadioGroup) findViewById(R.id.radioGroupOffer);
         radioButtonFifteen = (RadioButton) findViewById(R.id.homdeDeleiveryThree);
-        radioButtonThirty = (RadioButton) findViewById(R.id.homdeDeleiveryeight);
+        //radioButtonThirty = (RadioButton) findViewById(R.id.homdeDeleiveryeight);
         editTextPinCode = (EditText) findViewById(R.id.editTextPinCode);
 
         buttonUpload = (Button) findViewById(R.id.buttonUpload);
@@ -128,7 +129,7 @@ public class AddressPrescription extends AppCompatActivity implements OnClickLis
         Typeface font = Typeface.createFromAsset(getAssets(),
                 "SofiaProLight.otf");
         radioButtonFifteen.setTypeface(font);
-        radioButtonThirty.setTypeface(font);
+        //radioButtonThirty.setTypeface(font);
         editTextDoctorAdd.setTypeface(font);
     }
 
@@ -181,7 +182,8 @@ public class AddressPrescription extends AppCompatActivity implements OnClickLis
         int id = arg0.getId();
         if (id == R.id.buttonUpload) {
             if (!radioButtonFifteen.isChecked()
-                    && !radioButtonThirty.isChecked()) {
+                    //&& !radioButtonThirty.isChecked()
+                    ) {
                 Toast.makeText(AddressPrescription.this,
                         "Please select the offer", Toast.LENGTH_LONG).show();
                 return;
